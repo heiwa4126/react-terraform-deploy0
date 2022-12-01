@@ -19,14 +19,14 @@ const gziplist = [".js", ".css", ".svg"]
 fs.rmSync(DESTDIR, { recursive: true, force: true })
 
 const gzipFile = (src, dest) => {
-  const gzip = createGzip({ level: 9 });
-  const source = createReadStream(src);
-  const destination = createWriteStream(dest);
+  const gzip = createGzip({ level: 9 })
+  const source = createReadStream(src)
+  const destination = createWriteStream(dest)
 
   pipeline(source, gzip, destination, (err) => {
     if (err) {
-      console.error('An error occurred:', err);
-      process.exitCode = 1;
+      console.error('An error occurred:', err)
+      process.exitCode = 1
     }
   });
 }
