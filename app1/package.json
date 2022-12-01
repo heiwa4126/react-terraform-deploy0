@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "gzip": "node gzipjs.js"
+    "gzip": "node gzipjs.js",
+    "tfinit": "cd ../deploy && terraform init",
+    "tfapply": "cd ../deploy && terraform apply -auto-approve"
   },
   "dependencies": {
     "react": "^18.2.0",

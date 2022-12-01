@@ -14,6 +14,7 @@ import { createGzip } from 'node:zlib'
 
 const SRCDIR = './dist'
 const DESTDIR = './dist-gz'
+const gziplist = [".js", ".css", ".svg"]
 
 fs.rmSync(DESTDIR, { recursive: true, force: true })
 
@@ -41,8 +42,7 @@ const copyRecursiveSync = (src, dest) => {
         path.join(dest, childItemName))
     })
   } else {
-    let ext = path.extname(src)
-    if (ext === '.js' || ext === '.svg') {
+    if (gziplist.includes(path.extname(src))) {
       gzipFile(src, dest)
     } else {
       fs.copyFileSync(src, dest)
