@@ -7,8 +7,8 @@
  * 単に'cp -r' だったら node16からは fs.cp, fs.cpSync が使える
 */
 
-import fs, { createReadStream, createWriteStream } from 'fs'
-import path from 'path'
+import fs, { createReadStream, createWriteStream } from 'node:fs'
+import path from 'node:path'
 import { pipeline } from 'node:stream'
 import { createGzip } from 'node:zlib'
 

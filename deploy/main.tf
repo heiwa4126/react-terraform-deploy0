@@ -31,7 +31,7 @@ provider "aws" {
   default_tags {
     tags = {
       mail         = var.author_mail
-      project_name = "s3www"
+      project_name = "${var.prefix}${random_id.id.hex}"
       provided_by  = "Terraform"
     }
   }

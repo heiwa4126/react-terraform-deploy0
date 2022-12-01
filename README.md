@@ -3,7 +3,7 @@
 Viteで作ったReactのアプリをAWS S3にTerraformでデプロイする。
 
 おまけ機能として
-.js, .css, .svg を gzip する。
+.js, .css, .svg を gzip する。JavaScriptのgzipは体感できるくらい早くなる。
 
 詳しい手順は 
 - [app1/README.md](app1/README.md)
@@ -21,3 +21,4 @@ Viteで作ったReactのアプリをAWS S3にTerraformでデプロイする。
 ## TODO
 
 ディレクトリ構造をもっと考える。
+deploy/をapp1/の下に置いたほうがいいかも。
