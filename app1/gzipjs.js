@@ -28,7 +28,7 @@ const gzipFile = (src, dest) => {
       console.error('An error occurred:', err)
       process.exitCode = 1
     }
-  });
+  })
 }
 
 const copyRecursiveSync = (src, dest) => {
