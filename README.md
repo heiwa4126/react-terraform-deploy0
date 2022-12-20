@@ -1,4 +1,4 @@
-# react-terraform-deploy1
+# react-terraform-deploy0
 
 Viteで作ったReactのアプリをAWS S3にTerraformでデプロイする。
 
